@@ -28,9 +28,9 @@ class Controller extends BaseController
 
     public function destroy($id)
     {
-        $product = Product::find($id);
-        $product->delete();
-        return redirect()->route('dashboard');
+        // $product = Product::find($id);
+        // $product->delete();
+        // return redirect()->route('dashboard');
     }
 
 

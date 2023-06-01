@@ -75,19 +75,6 @@
                         <td> {{$post->dispatch_place}} </td>
                         <td> {{$post->unit}} </td>
                         <td> {{$post->output_quantity}} </td>
-
-                        {{-- <td class="v-align-middle">
-                            <p>
-                              <form action="{{route('product.destroy',$post->id)}}" method="POST">
-                                @csrf
-                                <input type="hidden" name="_method" value="DELETE">
-                                <x-primary-button class="ml-3">
-                                    {{ __('SİL') }}
-                                </x-primary-button>
-                              </form>
-                            </p>
-                        </td> --}}
-
                         </tr>
                     @endforeach
                 </tbody>

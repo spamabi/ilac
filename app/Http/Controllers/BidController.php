@@ -71,9 +71,9 @@ class BidController extends Controller
     
     public function destroy($id)
     {
-        $bid = Bid::find($id);
-        $bid->delete();
-        return redirect()->back();
+        // $bid = Bid::find($id);
+        // $bid->delete();
+        // return redirect()->back();
     }
 
 }
