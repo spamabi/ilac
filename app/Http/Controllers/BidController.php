@@ -35,7 +35,7 @@ class BidController extends Controller
         $bid->date = $request->bid_date;
         $bid->save();
         $bid->addMediaFromRequest('file')->toMediaCollection(); 
-        // $bid->getFirstMediaUrl();
+        return back();
     }
 
     /**
@@ -71,9 +71,7 @@ class BidController extends Controller
     
     public function destroy($id)
     {
-        // $bid = Bid::find($id);
-        // $bid->delete();
-        // return redirect()->back();
+        //
     }
 
 }

@@ -13,11 +13,11 @@
                     @method('post')
         
                     <h2 class="text-lg font-medium text-gray-900">
-                        {{ __('Yüklemek istediğiniz Excel dosyasını seçin!') }}
+                        {{ __('Lütfen ihale detaylarını girin!') }}
                     </h2>
         
                     <p class="mt-1 text-sm text-gray-600">
-                        {{ __('Yükleme sırasında bir hatayla karşılaşırsanız lütfen örnek Excel dosyasını inceleyin.') }}
+                        {{ __('Yükleme sırasında bir hatayla karşılaşırsanız sistem yöneticisine başvurun!') }}
                     </p>
         
                     <div class="mt-6">

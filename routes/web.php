@@ -20,6 +20,8 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('/', [ProductController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+
 Route::get('/dashboard', [ProductController::class, 'index'])->name('dashboard');
 Route::post('/file-import', [ProductController::class, 'import'])->name('file-import');
 
