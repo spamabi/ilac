@@ -16,15 +16,18 @@ use App\Http\Controllers\ProductController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', function () {
+    return view('auth.login');
+});
 
-Route::get('/', [Controller::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/file-import', [Controller::class, 'import'])->middleware(['auth', 'verified'])->name('file-import');
+Route::get('/dashboard', [ProductController::class, 'index'])->name('dashboard');
+Route::post('/file-import', [ProductController::class, 'import'])->name('file-import');
 
 Route::resource('bids' , BidController::class);
 
-Route::get('/register', function () {
-    return redirect('/');
-});
+// Route::get('/register', function () {
+//     return redirect('/');
+// });
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
